@@ -11,4 +11,6 @@
         <li class="list-group-item list-group-item-action list-group-item-primary"><a href="{{ path('detail',{"id":w.id}) }}">{{w.titre}}</a></li>
     {% endfor %}
     </ul>
+    <br>
+    <a href="{{ path('add_wish') }}" class="btn btn-primary">Ajouter un souhait</a>
 {% endblock %}
