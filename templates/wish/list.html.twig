@@ -1,0 +1,14 @@
+{% extends "base.html.twig" %}
+
+{% block titre %}
+    Liste des souhaits
+{% endblock %}
+
+{% block contenu %}
+    <h5>Bucket-List</h5>
+    <ul>
+    {% for w in wishes %}
+        <li>{{w.titre}}</li>
+    {% endfor %}
+    </ul>
+{% endblock %}
