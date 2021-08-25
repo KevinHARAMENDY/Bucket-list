@@ -15,8 +15,8 @@ class WishType extends AbstractType
             ->add('titre')
             ->add('description')
             ->add('auteur')
-            ->add('isPublished')
-            ->add('dateCreated')
+            //->add('isPublished')
+            //->add('dateCreated')
         ;
     }
 

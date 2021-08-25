@@ -42,6 +42,8 @@ class WishController extends AbstractController
         $form->handleRequest($req);
 
         if ($form->isSubmitted()) {
+            $wish->setIsPublished(true);
+            $wish->setDateCreated(new \DateTime());
             $em->persist($wish);
             $em->flush();
             return $this->redirectToRoute("wishlist");

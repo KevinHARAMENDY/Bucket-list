@@ -5,12 +5,14 @@
 {% endblock %}
 
 {% block contenu %}
-    {{ form_start(form) }}
-        <div class="mb-3">Titre : {{ form_widget(form.titre, { 'attr': {'class': 'form-control'} }) }}</div>
-        <div class="mb-3">Description : {{ form_widget(form.description, { 'attr': {'class': 'form-control'} }) }}</div>
-        <div class="mb-3">Auteur : {{ form_widget(form.auteur, { 'attr': {'class': 'form-control'} }) }}</div>
-        {{ form_widget(form.isPublished, { 'attr': {'hidden': '','checked': ''} }) }}
-        {{ form_widget(form.dateCreated, { 'attr': {'hidden': '','value': "{{'now'|date('Y-m-d H:i:s')}}"} }) }}
-        <button type="submit" class="btn btn-dark">Ajouter</button>
-    {{ form_end(form) }}
+    <div class="container">
+        <div class="col-6">
+            {{ form_start(form) }}
+                {{ form_widget(form) }}
+                <br>
+                <button type="submit" class="btn btn-dark">Ajouter</button>
+            {{ form_end(form) }}
+        </div>
+    </div>
+    
 {% endblock %}
