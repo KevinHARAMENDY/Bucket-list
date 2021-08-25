@@ -19,6 +19,14 @@ class WishRepository extends ServiceEntityRepository
         parent::__construct($registry, Wish::class);
     }
 
+    public function selectById($id) {
+        $em = $this->getEntityManager();
+        $dql = "SELECT from wish WHERE id = ".$id;
+        $query = $em->createQuery($dql);
+        $query->setMaxResults(1);
+        return $query->getResult();
+    }
+
     // /**
     //  * @return Wish[] Returns an array of Wish objects
     //  */

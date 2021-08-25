@@ -1,5 +1,11 @@
 {% extends "base.html.twig" %}
 
 {% block titre %}
-    Detail d'un souhait
+    Detail du souhait "{{ wish.titre }}"
+{% endblock %}
+
+{% block contenu %}
+    Auteur : {{ wish.auteur }}
+    Fait le : {{ wish.date_created }}
+    Description : {{ wish.description }}
 {% endblock %}
