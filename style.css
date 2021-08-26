@@ -1,0 +1,15 @@
+body{
+    font-family: 'Klee One', cursive;
+}
+
+a:link 
+{ 
+    text-decoration:none; 
+}
+
+.logo{
+    width:2%;
+    height:2%;
+    margin-left:1%;
+    margin-bottom:1%;
+}
