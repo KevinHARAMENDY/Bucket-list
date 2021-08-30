@@ -8,4 +8,5 @@
     <div><span style="font-weight:bold">Auteur :</span>&nbsp;{{ wish.auteur }}</div>
     <div><span style="font-weight:bold">Fait le :</span>&nbsp;{{ wish.dateCreated|date("d/m/Y") }}</div>
     <div><span style="font-weight:bold">Description :</span>&nbsp;{{ wish.description }}</div>
+	<div><span style="font-weight:bold">Catégorie :</span>&nbsp;{{ wish.categ.label }}</div>
 {% endblock %}

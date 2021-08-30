@@ -15,6 +15,7 @@ class WishType extends AbstractType
             ->add('titre')
             ->add('description')
             ->add('auteur')
+			->add('categ',null,['choice_label'=>'label'])
             //->add('isPublished')
             //->add('dateCreated')
         ;
