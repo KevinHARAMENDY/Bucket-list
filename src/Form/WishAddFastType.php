@@ -13,10 +13,7 @@ class WishAddFastType extends AbstractType
     {
         $builder
             ->add('titre')
-            //->add('description')
-            //->add('auteur')
-            //->add('isPublished')
-            //->add('dateCreated')
+            ->add('categ',null,['choice_label'=>'label'])
         ;
     }
 
