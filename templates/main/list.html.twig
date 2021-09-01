@@ -12,10 +12,15 @@
             <li class="list-group-item list-group-item-dark"><h5>Bucket-List</h5></li>
                 {% for w in wishes %}
                     <li class="list-group-item list-group-item-action list-group-item-primary">
-                        <a href="{{ path('detail',{"id":w.id}) }}">{{w.titre}}</a>
-                        <br>
-                        <a href="{{ path('edit_wish',{"id":w.id}) }}" class="btn btn-dark">Modifier</a>
-                        <a href="{{ path('delete_wish',{"id":w.id}) }}" class="btn btn-primary">Supprimer</a>
+                        <ul style="list-style-type: none">
+                            <li>
+                                <a href="{{ path('detail',{"id":w.id}) }}">{{w.titre}}</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('edit_wish',{"id":w.id}) }}" class="btn btn-dark">Modifier</a>
+                                <a href="{{ path('delete_wish',{"id":w.id}) }}" class="btn btn-primary">Supprimer</a>
+                            </li>
+                        </ul>
                     </li>
                 {% endfor %}
             </li>
