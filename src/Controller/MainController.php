@@ -19,7 +19,7 @@ class MainController extends AbstractController
     }
 
     /**
-     * @Route("/co/wishlist", name="wishlist")
+     * @Route("/wishlist", name="wishlist")
      */
     public function wishlist(WishRepository $wr): Response
     {
@@ -30,7 +30,7 @@ class MainController extends AbstractController
     }
 
     /**
-     * @Route("/co/detail_wish/{id}", name="detail")
+     * @Route("/detail_wish/{id}", name="detail")
      */
     public function detail(Wish $w): Response
     {

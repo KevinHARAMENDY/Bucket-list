@@ -16,7 +16,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class WishController extends AbstractController
 {
     /**
-     * @Route("/co/ajouter", name="add_wish")
+     * @Route("/ajouter", name="add_wish")
      */
     public function add_wish(Request $req, EntityManagerInterface $em): Response
     {
