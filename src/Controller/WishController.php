@@ -16,34 +16,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class WishController extends AbstractController
 {
     /**
-     * @Route("/admin", name="all_wishlist")
-     */
-    public function all_wishlist(WishRepository $wr, Request $req, EntityManagerInterface $em): Response
-    {
-        $wishes = $wr->findBy([],["dateCreated" => "DESC"]);
-
-        $wish = new Wish();
-        $form = $this->createForm(WishAddFastType::class,$wish);
-        $form->handleRequest($req);
-
-        if ($form->isSubmitted()) {
-            $wish->setAuteur("Lambdadmin");
-            $wish->setDescription("Ajout rapide d'un admin");
-            $wish->setIsPublished(true);
-            $wish->setDateCreated(new \DateTime());
-            $em->persist($wish);
-            $em->flush();
-            return $this->redirectToRoute("wishlist");
-        }
-
-        return $this->render('wish/listAll.html.twig', [
-            "wishes" => $wishes,
-            "form" => $form->createView()
-        ]);
-    }
-
-    /**
-     * @Route("/ajouter", name="add_wish")
+     * @Route("/co/ajouter", name="add_wish")
      */
     public function add_wish(Request $req, EntityManagerInterface $em): Response
     {

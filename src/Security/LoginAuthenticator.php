@@ -66,7 +66,7 @@ class LoginAuthenticator extends AbstractFormLoginAuthenticator
         $user = $this->entityManager->getRepository(User::class)->findOneBy(['pseudo' => $credentials['pseudo']]);
 
         if (!$user) {
-            throw new UsernameNotFoundException('Pseudo could not be found.');
+            throw new UsernameNotFoundException('Pseudo introuvable');
         }
 
         return $user;
@@ -74,9 +74,8 @@ class LoginAuthenticator extends AbstractFormLoginAuthenticator
 
     public function checkCredentials($credentials, UserInterface $user)
     {
-        // Check the user's password or other credentials and return true or false
-        // If there are no credentials to check, you can just return true
-        return true;
+        if (password_verify($credentials["password"],$user->getPassword())) return true;
+        else return false;
     }
 
     public function onAuthenticationSuccess(Request $request, TokenInterface $token, string $providerKey)

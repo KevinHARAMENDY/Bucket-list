@@ -36,4 +36,4 @@ security:
     # Note: Only the *first* access control that matches will be used
     access_control:
          - { path: ^/admin, roles: admin }
-        # - { path: ^/profile, roles: ROLE_USER }
+         #- { path: ^/co, roles: user }
