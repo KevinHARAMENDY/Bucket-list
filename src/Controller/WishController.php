@@ -43,7 +43,7 @@ class WishController extends AbstractController
     }
 
     /**
-     * @Route("/admin/ajouter", name="add_wish")
+     * @Route("/ajouter", name="add_wish")
      */
     public function add_wish(Request $req, EntityManagerInterface $em): Response
     {

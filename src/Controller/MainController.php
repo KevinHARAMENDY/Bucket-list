@@ -19,14 +19,6 @@ class MainController extends AbstractController
     }
 
     /**
-     * @Route("/about", name="about")
-     */
-    public function about(): Response
-    {
-        return $this->render('main/about.html.twig');
-    }
-
-    /**
      * @Route("/wishlist", name="wishlist")
      */
     public function wishlist(WishRepository $wr): Response

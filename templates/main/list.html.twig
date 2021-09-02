@@ -16,10 +16,12 @@
                             <li>
                                 <a href="{{ path('detail',{"id":w.id}) }}">{{w.titre}}</a>
                             </li>
+                            {% if app.user and "admin" in app.user.roles %}
                             <li>
                                 <a href="{{ path('edit_wish',{"id":w.id}) }}" class="btn btn-dark">Modifier</a>
                                 <a href="{{ path('delete_wish',{"id":w.id}) }}" class="btn btn-primary">Supprimer</a>
                             </li>
+                            {% endif %}
                         </ul>
                     </li>
                 {% endfor %}

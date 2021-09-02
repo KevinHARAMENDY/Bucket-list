@@ -1,5 +1,13 @@
 {% extends "base.html.twig" %}
 
 {% block titre %}
-    Accueil
+	Accueil
+{% endblock %}
+
+{% block contenu %}
+	{% if app.user %}
+		Bonjour {{ app.user.pseudo }} !
+	{% else %}
+		Veuillez vous connecter
+	{% endif %}
 {% endblock %}
